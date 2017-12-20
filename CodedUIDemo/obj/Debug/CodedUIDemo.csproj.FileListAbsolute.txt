@@ -1,0 +1,6 @@
+C:\Users\kmohamed\Documents\Visual Studio 2015\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\CodedUIDemo.dll
+C:\Users\kmohamed\Documents\Visual Studio 2015\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\CodedUIDemo.pdb
+C:\Users\kmohamed\Documents\Visual Studio 2015\Projects\CodedUIDemo\CodedUIDemo\obj\Debug\CodedUIDemo.csprojResolveAssemblyReference.cache
+C:\Users\kmohamed\Documents\Visual Studio 2015\Projects\CodedUIDemo\CodedUIDemo\obj\Debug\CodedUIDemo.dll
+C:\Users\kmohamed\Documents\Visual Studio 2015\Projects\CodedUIDemo\CodedUIDemo\obj\Debug\CodedUIDemo.pdb
+C:\Users\kmohamed\Documents\Visual Studio 2015\Projects\CodedUIDemo\CodedUIDemo\bin\Debug\CodedUIDemo.dll.config
