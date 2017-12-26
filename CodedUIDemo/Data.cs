@@ -28,6 +28,6 @@ namespace CodedUIDemo
                 return languages[r];
             }          
         }
-        public static string RandomUserNameGenerator => "Test" +Stopwatch.GetTimestamp();
+        public static string RandomUserNameGenerator => TestData.NewUser_UsernamePrefix +Stopwatch.GetTimestamp();
     }
 }

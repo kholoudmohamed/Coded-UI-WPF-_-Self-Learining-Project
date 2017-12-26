@@ -29,10 +29,10 @@ namespace CodedUIDemo
             Assert.IsTrue(ATUUIMap.CareFusionLogo.Exists,"Carefusion logo is not exist in the Login Page");
 
             Assert.IsTrue(ATUUIMap.LoginPageFirstTitle.Exists,"Login Page Alaris First Title is not displayed");
-            Assert.AreEqual("Alaris Technical Utility", _actions.Get_LoginPageFirstTitleTxt(), "Login Page Alaris First Title is not corect");
+            Assert.AreEqual(TestData.LoginPage_FirstTitle, _actions.Get_LoginPageFirstTitleTxt(), "Login Page Alaris First Title is not corect");
 
             Assert.IsTrue(ATUUIMap.LoginPageSecondTitle.Exists, "Login Page Alaris Second Title is not displayed");
-            Assert.AreEqual("Infusion Pump Management Tool", _actions.Get_LoginPageSecondTitleTxt(), "Login Page Alaris Second Title is not corect");
+            Assert.AreEqual(TestData.LoginPage_SecondTitle, _actions.Get_LoginPageSecondTitleTxt(), "Login Page Alaris Second Title is not corect");
 
             Assert.IsTrue(ATUUIMap.UsernameTxtBx.Exists, "Username text box is not displayed");
             Assert.IsTrue(ATUUIMap.UsernameTxtBx.Enabled,"Username text box is not enabled");
@@ -63,10 +63,10 @@ namespace CodedUIDemo
         [TestMethod]
         public void InvalidLogin()
         {
-            _actions.TypeIn_UsernameAndPassword("Invalid", "1234");
+            _actions.TypeIn_UsernameAndPassword(TestData.InvalidUsername, TestData.InvalidPassword);
             _actions.ClickOn_Login();
 
-            Assert.AreEqual("Incorrect username or password", _actions.Get_InvalidLoginErrorMessage(), "Login Error Message is not correct");
+            Assert.AreEqual(TestData.InvalidLoginErrorMessage, _actions.Get_InvalidLoginErrorMessage(), "Login Error Message is not correct");
         }
 
         [TestMethod]
@@ -80,13 +80,13 @@ namespace CodedUIDemo
             var lang = Data.RandomLanguageGenerator;
             var username = Data.RandomUserNameGenerator;
 
-            _actions.FillIn_NewUserData("Test FirstName", "Test LastName", username, "123@stA.com", lang);
+            _actions.FillIn_NewUserData(TestData.NewUser_FirstName, TestData.NewUser_LastName, username, TestData.NewUser_Password, lang);
             
             _actions.ClickOn_CloseNewUserNotificationPopup();
 
             _actions.SuperAdminSignOut();
 
-            _actions.TypeIn_UsernameAndPassword(username, "123@stA.com");
+            _actions.TypeIn_UsernameAndPassword(username, TestData.NewUser_Password);
             _actions.ClickOn_Login();
 
             Assert.IsTrue(ATUUIMap.ChangePasswordWindow.Exists,"Change Password Window is not displayed");
